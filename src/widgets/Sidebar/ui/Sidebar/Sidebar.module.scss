@@ -1,10 +1,9 @@
 .Sidebar {
-  height: calc(100vh - var(--navbar-height));
-  width: var(--sidebar-width);
-  background: var(--inverted-bg-color);
-
-  position: relative;
-  transition: width .3s ease-in-out;
+    height: calc(100vh - var(--navbar-height));
+    width: var(--sidebar-width);
+    background: var(--inverted-bg-color);
+    position: relative;
+    transition: width .3s ease-in-out;
 }
 
 .collapsed {
@@ -20,5 +19,5 @@
 }
 
 .lang {
-  margin-left: 20px;
+    margin-left: 20px;
 }
