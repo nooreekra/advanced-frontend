@@ -50,7 +50,6 @@ module.exports = {
     "react/no-deprecated": "warn",
     "@typescript-eslint/naming-convention": "off",
     "i18next/no-literal-string": ["error", { markupOnly: true }],
-    "max-len": ["error", { "ignore-comments": true }],
   },
   globals: {
     __IS_DEV__: true,
