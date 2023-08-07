@@ -1,38 +1,31 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true,
+    es2021: true
   },
-  extends: [
-    "standard-with-typescript",
-    "plugin:react/recommended",
-    "plugin:i18next/recommended",
-  ],
-  overrides: [
-    {
-      env: {
-        node: true,
-        jest: true,
-      },
-      files: [".eslintrc.{js,cjs}"],
-      parserOptions: {
-        sourceType: "script",
-      },
+  extends: ["standard-with-typescript", "plugin:react/recommended", "plugin:i18next/recommended", "plugin:storybook/recommended"],
+  overrides: [{
+    env: {
+      node: true,
+      jest: true
     },
-  ],
+    files: [".eslintrc.{js,cjs}"],
+    parserOptions: {
+      sourceType: "script"
+    }
+  }],
   parserOptions: {
     project: ["./tsconfig.json"],
     ecmaVersion: "latest",
-    sourceType: "module",
+    sourceType: "module"
   },
   plugins: ["react", "i18next", "@typescript-eslint"],
   rules: {
     "react/jsx-indent": [2, 4],
     "react/jsx-indent-props": [2, 4],
-    "react/jsx-filename-extension": [
-      2,
-      { extensions: [".js", ".jsx", ".tsx"] },
-    ],
+    "react/jsx-filename-extension": [2, {
+      extensions: [".js", ".jsx", ".tsx"]
+    }],
     "import/no-unresolved": "off",
     "import/prefer-default-export": "off",
     "no-unused-vars": "warn",
@@ -49,9 +42,17 @@ module.exports = {
     "@typescript-eslint/explicit-function-return-type": "off",
     "react/no-deprecated": "warn",
     "@typescript-eslint/naming-convention": "off",
-    "i18next/no-literal-string": ["error", { markupOnly: true }],
+    "i18next/no-literal-string": ["error", {
+      markupOnly: true
+    }]
   },
   globals: {
-    __IS_DEV__: true,
+    __IS_DEV__: true
   },
+  overrides: [{
+    files: ['**/src/**/*.test.{ts, tsx}'],
+    rules: {
+      'i18next/no-literal-string': 'off'
+    }
+  }]
 };
