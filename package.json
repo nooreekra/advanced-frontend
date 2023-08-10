@@ -66,6 +66,7 @@
     "loki": "^0.32.0",
     "mini-css-extract-plugin": "^2.7.6",
     "postcss": "^8.4.27",
+    "reg-cli": "^0.17.7",
     "regenerator-runtime": "^0.13.9",
     "sass": "^1.64.2",
     "sass-loader": "^13.3.2",

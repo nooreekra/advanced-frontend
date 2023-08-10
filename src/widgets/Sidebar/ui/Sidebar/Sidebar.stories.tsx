@@ -3,13 +3,17 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import { Theme } from 'app/providers/ThemeProvider'
 import { Sidebar } from './Sidebar'
+import { reactRouterParameters, withRouter } from 'storybook-addon-react-router-v6'
+import { RoutePath } from 'shared/config/routerConfig/routerConfig'
 
 const meta = {
   title: 'widget/Sidebar',
   component: Sidebar,
   parameters: {
-    layout: 'centered'
+    layout: 'centered',
+    reactRouter: reactRouterParameters({ routing: RoutePath.main })
   },
+  decorators: [withRouter],
   tags: ['autodocs']
 } satisfies Meta<typeof Sidebar>
 
