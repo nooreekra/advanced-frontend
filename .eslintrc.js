@@ -42,11 +42,12 @@ module.exports = {
     "@typescript-eslint/explicit-function-return-type": "off",
     "react/no-deprecated": "warn",
     "@typescript-eslint/naming-convention": "off",
-    "i18next/no-literal-string": ["error", {
+    "i18next/no-literal-string": ["warn", {
       markupOnly: true
     }],
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "error"
+    "react-hooks/exhaustive-deps": "error",
+    "no-param-reassign": "off"
   },
   globals: {
     __IS_DEV__: true
